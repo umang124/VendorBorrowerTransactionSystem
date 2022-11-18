@@ -1,0 +1,104 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\ASP.NET\\.NET_Framework\\LoanManagementSystem\\LMSUnitTest\\LMSUnitTest.csproj": {}
+  },
+  "projects": {
+    "D:\\ASP.NET\\.NET_Framework\\LoanManagementSystem\\LMSUnitTest\\LMSUnitTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ASP.NET\\.NET_Framework\\LoanManagementSystem\\LMSUnitTest\\LMSUnitTest.csproj",
+        "projectName": "LMSUnitTest",
+        "projectPath": "D:\\ASP.NET\\.NET_Framework\\LoanManagementSystem\\LMSUnitTest\\LMSUnitTest.csproj",
+        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
+        "outputPath": "D:\\ASP.NET\\.NET_Framework\\LoanManagementSystem\\LMSUnitTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net461"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net461": {
+            "projectReferences": {
+              "D:\\ASP.NET\\.NET_Framework\\LoanManagementSystem\\LoanManagementSystem\\LoanManagementSystem.csproj": {
+                "projectPath": "D:\\ASP.NET\\.NET_Framework\\LoanManagementSystem\\LoanManagementSystem\\LoanManagementSystem.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.2, )"
+            },
+            "Telerivet.NET": {
+              "target": "Package",
+              "version": "[1.5.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\ASP.NET\\.NET_Framework\\LoanManagementSystem\\LoanManagementSystem\\LoanManagementSystem.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\ASP.NET\\.NET_Framework\\LoanManagementSystem\\LoanManagementSystem\\LoanManagementSystem.csproj",
+        "projectName": "LoanManagementSystem",
+        "projectPath": "D:\\ASP.NET\\.NET_Framework\\LoanManagementSystem\\LoanManagementSystem\\LoanManagementSystem.csproj",
+        "frameworks": {
+          "net461": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net461": {}
+      }
+    }
+  }
+}

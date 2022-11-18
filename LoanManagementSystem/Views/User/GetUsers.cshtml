@@ -1,0 +1,32 @@
+﻿@model ICollection<LoanManagementSystem.GetModel.GetUser>
+@{
+    ViewBag.Title = "GetUsers";
+}
+<div class='shadow-lg p-3 mb-5 bg-body rounded mx-auto' style="width: 60rem; margin-top: 40px">
+    <h2 class="text-center">View Users</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>              
+                <th>User Name</th>
+                <th>User Type</th>
+                <th>Phone Number</th>
+                <th>Balance</th>   
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var getUser in Model)
+            {
+                <tr>
+                    <td>@getUser.UserName</td>
+                    <td>@getUser.UserTypeName</td>
+                    <td>@getUser.PhoneNumber</td>
+                    <td>@getUser.Balance</td>
+                    <td>
+                        @Html.ActionLink("Update", "UpdateBalance", "User", new { id = getUser.Id }, new { @class = "btn btn-primary btn-large" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,50 @@
+﻿@model ICollection<LoanManagementSystem.GetModel.GetBalanceUpdate>
+@{
+    ViewBag.Title = "User Balance Updated By Banker";
+}
+
+@{
+    LoanManagementSystem.Data.LMSDbContext _dbContext = new LoanManagementSystem.Data.LMSDbContext();
+}
+
+<div class='shadow-lg p-3 mb-5 bg-body rounded mx-auto' style="width: 60rem; margin-top: 40px">
+    <h2 class="text-center">User Balance Updated By Banker</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>User Name</th>
+                <th>Amount</th>
+                <th>Action Name</th>
+                <th>Approved By</th>
+                <th>Action Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                @foreach (var getDetails in Model)
+                {
+                    <tr>
+                        <td>@getDetails.Id</td>
+                        <td>@getDetails.UserName</td>
+                        <td>@getDetails.Amount</td>
+                        <td>@getDetails.Action</td>
+                        @{
+                            var getUserName = _dbContext.Users.FirstOrDefault(x => x.Id == getDetails.ActionDoneBy);
+                            if (getUserName != null)
+                            {
+                                <td>@getUserName.Name</td>
+                            }
+                            else
+                            {
+                                <td>@getDetails.ActionDoneBy</td>
+                            }
+                        }
+
+                        <td>@getDetails.ActionDate</td>
+                    </tr>
+                }
+            
+        </tbody>
+    </table>
+</div>

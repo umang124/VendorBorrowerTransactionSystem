@@ -1,0 +1,28 @@
+﻿@model ICollection<LoanManagementSystem.GetModel.GetUser>
+@{
+    ViewBag.Title = "GetBankers";
+}
+<div class='shadow-lg p-3 mb-5 bg-body rounded mx-auto' style="width: 60rem; margin-top: 40px">
+    <h2 class="text-center">View Users</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>User Name</th>
+                <th>User Type</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var getBankers in Model)
+            {
+                <tr>
+                    <td>@getBankers.Id</td>
+                    <td>@getBankers.UserName</td>
+                    <td>@getBankers.UserTypeName</td>
+                    <td>@getBankers.PhoneNumber</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

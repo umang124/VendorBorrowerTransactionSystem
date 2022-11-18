@@ -1,0 +1,50 @@
+﻿@model ICollection<LoanManagementSystem.GetModel.GetBalanceUpdate>
+@{
+    ViewBag.Title = "UnApprovedWithdraw";
+}
+@{
+    LoanManagementSystem.Data.LMSDbContext _dbContext = new LoanManagementSystem.Data.LMSDbContext();
+}
+
+<div class='shadow-lg p-3 mb-5 bg-body rounded mx-auto' style="width: 60rem; margin-top: 40px">
+    <h2 class="text-center">Users UnApproved Withdraw</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>User Name</th>
+                <th>Amount</th>
+                <th>ProceededAt</th>
+                <th>Action Name</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            @foreach (var getUnApprovedWithdraw in Model)
+                {
+                    <tr>
+                        <td>@getUnApprovedWithdraw.Id</td>
+                        <td>@getUnApprovedWithdraw.UserName</td>
+                        <td>@getUnApprovedWithdraw.Amount</td>
+                        <td>@getUnApprovedWithdraw.ProceededAt</td>
+                        <td>@getUnApprovedWithdraw.Action</td>
+                        <td>Pending...</td>
+                        <td class="d-flex flex-row mb-3">
+                            <form action="ApproveWithdraw" method="post">
+                                <input type="hidden" name="b_id" value="@getUnApprovedWithdraw.Id" />
+                                <button type="submit" class="btn btn-primary me-2">Approve</button>
+                            </form>
+                            <form action="RejectWithdraw" method="post">
+                                <input type="hidden" name="b_id" value="@getUnApprovedWithdraw.Id" />
+                                <button type="submit" class="btn btn-danger">Reject</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            
+        </tbody>
+    </table>
+</div>
+

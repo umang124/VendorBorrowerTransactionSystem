@@ -1,0 +1,34 @@
+﻿@model ICollection<LoanManagementSystem.GetModel.GetTransaction>
+@{
+    ViewBag.Title = "GetRejectedTransactions";
+}
+<div class='shadow-lg p-3 mb-5 bg-body rounded mx-auto' style="width: 70rem; margin-top: 40px">
+    <h2 class="text-center">Approved Transactions</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Transaction Id</th>
+                <th>Sender Mobile Number</th>
+                <th>Receiver Mobile Number</th>
+                <th>Amount</th>
+                <th>Rejected By</th>
+                <th>Approve Status</th>
+                <th>Proceeded At</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var getTransaction in Model)
+            {
+                <tr>
+                    <td>@getTransaction.TransactionId</td>
+                    <td>@getTransaction.SenderMobileNumber</td>
+                    <td>@getTransaction.ReceiverMobileNumber</td>
+                    <td>@getTransaction.Amount</td>
+                    <td>@getTransaction.Name</td>
+                    <td>Rejected...</td>
+                    <td>@getTransaction.ProceededAt</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

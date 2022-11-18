@@ -1,0 +1,44 @@
+﻿@model ICollection<LoanManagementSystem.GetModel.GetTransaction>
+@{
+    ViewBag.Title = "GetUnApprovedTransactions";
+}
+
+<div class='shadow-lg p-3 mb-5 bg-body rounded mx-auto' style="width: 70rem; margin-top: 40px">
+    <h2 class="text-center">UnApproved Transactions</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>TransactionId</th>
+                <th>SenderMobileNumber</th>
+                <th>ReceiverMobileNumber</th>
+                <th>Amount</th>
+                <th>ApproveStatus</th>
+                <th>ProceededAt</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var getTransaction in Model)
+            {
+                <tr>
+                    <td>@getTransaction.TransactionId</td>
+                    <td>@getTransaction.SenderMobileNumber</td>
+                    <td>@getTransaction.ReceiverMobileNumber</td>
+                    <td>@getTransaction.Amount</td>
+                    <td>Pending...</td>
+                    <td>@getTransaction.ProceededAt</td>
+                    <td class="d-flex flex-row mb-3">
+                        <form action="ApproveStatus" method="post">
+                            <input type="hidden" name="t_id" value="@getTransaction.TransactionId" />
+                            <button type="submit" class="btn btn-primary me-2">Approve</button>
+                        </form>
+                        <form action="RejectStatus" method="post">
+                            <input type="hidden" name="t_id" value="@getTransaction.TransactionId" />
+                            <button type="submit" class="btn btn-danger">Reject</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

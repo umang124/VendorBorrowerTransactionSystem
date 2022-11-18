@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanManagementSystem", "LoanManagementSystem\LoanManagementSystem.csproj", "{3CB58C2E-566A-43F2-B81C-02EF5A706C44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMSUnitTest", "LMSUnitTest\LMSUnitTest.csproj", "{C253F899-CBA6-437C-9A4D-31B3EF3DED53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CB58C2E-566A-43F2-B81C-02EF5A706C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB58C2E-566A-43F2-B81C-02EF5A706C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB58C2E-566A-43F2-B81C-02EF5A706C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB58C2E-566A-43F2-B81C-02EF5A706C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C253F899-CBA6-437C-9A4D-31B3EF3DED53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C253F899-CBA6-437C-9A4D-31B3EF3DED53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C253F899-CBA6-437C-9A4D-31B3EF3DED53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C253F899-CBA6-437C-9A4D-31B3EF3DED53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
+		SolutionGuid = {D66B9EC6-FF32-48FD-B854-D0CD167F8823}
+	EndGlobalSection
+EndGlobal

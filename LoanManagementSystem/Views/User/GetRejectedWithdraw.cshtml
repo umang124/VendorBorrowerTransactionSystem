@@ -1,0 +1,55 @@
+﻿@model ICollection<LoanManagementSystem.GetModel.GetBalanceUpdate>
+@{
+    ViewBag.Title = "GetRejectedWithdraw";
+}
+
+@{
+    LoanManagementSystem.Data.LMSDbContext _dbContext = new LoanManagementSystem.Data.LMSDbContext();
+}
+
+<div class='shadow-lg p-3 mb-5 bg-body rounded mx-auto' style="width: 60rem; margin-top: 40px">
+    <h2 class="text-center">Users Rejected Withdraws</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>User Name</th>
+                <th>Amount</th>
+                <th>ProceededAt</th>
+                <th>Action Name</th>
+                <th>Approved By</th>
+                <th>Status</th>
+                <th>Action Date</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var gedRejectedWithdraw in Model)
+            {
+                <tr>
+                    <td>@gedRejectedWithdraw.Id</td>
+                    <td>@gedRejectedWithdraw.UserName</td>
+                    <td>@gedRejectedWithdraw.Amount</td>
+                    <td>@gedRejectedWithdraw.ProceededAt</td>
+                    <td>@gedRejectedWithdraw.Action</td>
+
+                    @{
+                        var getUserName = _dbContext.Users.FirstOrDefault(x => x.Id == gedRejectedWithdraw.ActionDoneBy);
+                        if (getUserName != null)
+                        {
+                            <td>@getUserName.Name</td>
+                        }
+                        else
+                        {
+                            <td>@gedRejectedWithdraw.ActionDoneBy</td>
+                        }
+                    }
+
+                    <td>Rejected...</td>
+                    <td>@gedRejectedWithdraw.ActionDate</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
